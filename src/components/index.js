@@ -1,5 +1,5 @@
 export { default as Button } from './Button'
-export { default as Card } from './Card'
+export { default as Cart } from './Cart'
 export { default as Line } from './Charts/Line'
 export { default as Pie } from './Charts/Pie'
 export { default as SparkLine } from './Charts/SparkLine'
