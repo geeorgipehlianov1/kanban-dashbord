@@ -44,23 +44,19 @@ export const gridOrderStatus = (props) => (
 );
 
 export const kanbanGrid = [
-  { headerText: 'To Do',
-    keyField: 'Open',
-    allowToggle: true },
+  { headerText: 'To Do', keyField: 'Open', allowToggle: true },
 
-  { headerText: 'In Progress',
-    keyField: 'InProgress',
-    allowToggle: true },
+  { headerText: 'In Progress', keyField: 'InProgress', allowToggle: true },
 
-  { headerText: 'Testing',
+  {
+    headerText: 'Testing',
     keyField: 'Testing',
     allowToggle: true,
-    isExpanded: false },
+    isExpanded: true
+  },
 
-  { headerText: 'Done',
-    keyField: 'Close',
-    allowToggle: true },
-];
+  { headerText: 'Done', keyField: 'Close', allowToggle: true }
+]
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
