@@ -6,7 +6,8 @@ import { SiShopware } from 'react-icons/si'
 import { links } from '../data/dummy'
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext()
+  const { activeMenu, setActiveMenu, screenSize, currentColor } =
+    useStateContext()
 
   const handleCloseSideBar = () => {
     if (activeMenu && screenSize <= 900) {
@@ -52,6 +53,9 @@ const Sidebar = () => {
                     <NavLink
                       onClick={handleCloseSideBar}
                       to={`/${item.name}`}
+                      style={({ isActive }) => ({
+                        backgroundColor: isActive ? currentColor : ''
+                      })}
                       key={item.name}
                       className={({ isActive }) =>
                         isActive ? `${activeLink}` : `${normalLink}`
